@@ -20,7 +20,7 @@ This can be a useful platform for developers to publish articles, blog posts, al
 * When the user enters a comment and clicks on the submit button while signed in, the comment is saved and the post is updated to display the comment, the comment creator’s username, and the date created.
 * When the user clicks on the dashboard option in the navigation, they are taken to the dashboard and presented with any blog posts they have already created and the option to add a new blog post.
 * When the user clicks on the button to add a new blog post, they are prompted to enter both a title and contents for their blog post.
-* When the user clicks on the button to create a new blog post, then the title and contents of their post are saved and they are taken back to an updated dashboard with their new blog post.
+***** When the user clicks on the button to create a new blog post, then the title and contents of their post are saved and they are taken back to an updated dashboard with their new blog post.
 * When the user clicks on one of their existing posts in the dashboard, they are able to delete or update their post and are taken back to an updated dashboard.
 * When the user clicks on the logout option in the navigation, they are signed out of the site.
 * When the user is idle on the site for more than a set time, then they are able to view comments but are prompted to log in again before they can add, update, or delete comments.
