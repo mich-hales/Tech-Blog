@@ -1,0 +1,26 @@
+{{#each user.posts as |post|}}
+<div class="card m-3">
+  <h5><a href="" style="text-decoration:none; color: inherit;"><div class="card-header">
+    {{post.title}}
+  </div></a></h5>
+
+  <div class="card-body">
+    <p class="card-title">Posted on: {{post.date}}</p>
+    <p class="card-text">{{post.content}}</p>
+  </div>
+</div>
+
+<div class="row justify-content-center">
+  <h3>Make a New Post</h4>
+</div>
+
+<form class="m-3">
+  <div class="form-group">
+    <input type="text" class="form-control" id="title" placeholder="Post Title Here">
+    <textarea class="form-control" placeholder="Post Content Here" id="newpost-content" rows="3"></textarea>
+    <div class="row justify-content-center">
+      <button type="submit" class="btn btn-primary m-2" id="btn">Create Post</button>
+    </div>
+  </div>
+</form>
+{{/each}}

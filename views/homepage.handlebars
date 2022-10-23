@@ -1,0 +1,13 @@
+{{#each posts as |post|}}
+<div class="card m-3">
+      <h5><a href="/post/{{post.id}}" style="text-decoration:none; color:inherit;">
+        <div class="card-header">
+          {{post.title}}
+        </div>
+      </a></h5>
+
+      <div class="card-body">
+        <p class="card-title">Posted by: {{post.user.name}} on {{post.date}}</p>
+      </div>
+</div>
+{{/each}}
