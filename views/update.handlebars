@@ -1,9 +1,11 @@
-    <form class="m-3">
-      <div class="form-group">
-        <textarea rows="3" class="form-control" id="title">{{post.title}}</textarea>
-        <textarea rows="3" class="form-control" id="post-text">{{post.content}}</textarea>
-        <div class="row justify-content-center">
-          <button type="submit" class="btn btn-primary m-2">Delete</button>
-        </div>
-      </div>
-    </form>
+<form class="m-3">
+  <div class="form-group">
+    <textarea rows="3" class="form-control" id="title">{{post.title}}</textarea>
+    <textarea rows="3" class="form-control" id="post-area">{{post.content}}</textarea>
+    <div class="row justify-content-center">
+      <button type="submit" class="btn btn-primary m-2" id="update">Update</button>
+      <button type="submit" class="btn btn-primary m-2" id="delete">Delete</button>
+    </div>
+  </div>
+</form>
+<script src="/js/update.js"></script>
