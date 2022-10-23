@@ -4,7 +4,7 @@ const comment = async (event) => {
     event.preventDefault();
     const commentData = document.querySelector('#comment-text').value.trim();
     const urlArr = window.location.href.split('/');
-    const postId = urlArr[urlArr.length-1];
+    const postId = urlArr[urlArr.length - 1];
 
     const response = await fetch('/api/comments', {
         method: 'POST',
@@ -17,7 +17,7 @@ const comment = async (event) => {
     if (response.ok) {
         document.location.reload();
     } else {
-        alert ('Error: comment not created.');
+        alert ('Failed to create comment');
     }
 };
 

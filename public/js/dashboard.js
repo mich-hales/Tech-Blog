@@ -2,12 +2,12 @@
 
 const post = async (event) => {
     event.preventDefault();
-    const postText = document.querySelector('#post-area').value.trim();
+    const postData = document.querySelector('#post-area').value.trim();
     const postTitle = document.querySelector('#title').value.trim();
 
     const response = await fetch('/api/posts', {
         method: 'POST',
-        body: JSON.stringify({ postText, postTitle }),
+        body: JSON.stringify({ postData, postTitle }),
         headers: {
             'Content-Type' : 'application/json',
         },
@@ -16,7 +16,7 @@ const post = async (event) => {
     if (response.ok) {
         document.location.reload();
     } else {
-        alert ('Error: post not created.');
+        alert ('Failed to create post');
     }
 };
 

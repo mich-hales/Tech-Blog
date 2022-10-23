@@ -11,7 +11,7 @@ const update = async (event) => {
         method: 'PUT',
         body: JSON.stringify({ postContent, postTitle, postId }),
         headers: {
-            'Content-Type' : 'application/json',
+            "Content-Type" : "application/json",
         },
     });
 
@@ -32,7 +32,7 @@ const deletePost = async (event) => {
         method: 'DELETE',
         body: JSON.stringify({ postId }),
         headers: {
-            'Content-Type' : 'application/json',
+            "Content-Type" : "application/json",
         },
     });
 
