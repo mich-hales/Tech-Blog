@@ -1,3 +1,9 @@
 .new-background {
     background-color:honeydew;
 }
+
+.post-title {
+    font-size: 1.5rem;
+    margin-left: 3px;
+}
+
