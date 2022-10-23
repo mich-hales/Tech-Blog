@@ -4,7 +4,7 @@ const { User } = require('../../models');
 // login button endpoint 
 router.post('/login', async (req, res) => {
     try {
-        const userData = await User.findOne({ where: { name: req.body.userName }});
+        const userData = await User.findOne({ where: { name: req.body.username }});
 
         if(!userData) {
             res.status(400).json({ message: 'Invalid username or password, please try again.'});
@@ -31,7 +31,7 @@ router.post('/login', async (req, res) => {
 router.post('/signup', async (req, res) => {
     try {
         const userData = await User.create({
-            name: req.body.userName,
+            name: req.body.username,
             password: req.body.password
         });
 

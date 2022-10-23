@@ -1,5 +1,4 @@
 const router = require('express').Router();
-const { json } = require('sequelize');
 const { Post } = require('../../models');
 const withAuth = require('../../utils/auth');
 
@@ -11,7 +10,7 @@ router.post('/', withAuth, async (req, res) => {
             title: req.body.postTitle,
             user_id: req.session.user_id,
         });
-        res.status(200)json(newComment);
+        res.status(200).json(newComment);
     } catch (err) {
         res.status(400).json(err);
     }
