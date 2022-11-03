@@ -6,14 +6,14 @@
   </div></a></h5>
 
   <div class="card-body">
-    <p class="card-title">Posted on: {{post.date}}</p>
     <p class="card-text">{{post.content}}</p>
+    <p class="card-title">Posted on: {{post.date}}</p>
   </div>
 </div>
 {{/each}}
 
 <div class="row justify-content-center mt-4">
-  <h3>Make a New Post</h3>
+  <h3 class="make-new">Make a New Post</h3>
 </div>
 
 <form class="m-3">
@@ -21,7 +21,7 @@
     <input type="text" class="form-control" id="title" placeholder="Post Title Here">
     <textarea class="form-control" placeholder="Post Content Here" id="post-area" rows="3"></textarea>
     <div class="row justify-content-center">
-      <button type="submit" class="btn btn-dark m-2" id="btn">Create Post</button>
+      <button type="submit" class="btn btn-dark m-2" id="create-post-btn">Create Post</button>
     </div>
   </div>
 </form>

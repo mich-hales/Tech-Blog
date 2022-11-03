@@ -2,14 +2,14 @@
 
 const update = async (event) => {
     event.preventDefault();
-    const postContent = document.querySelector('#post-area').value.trim();
     const postTitle = document.querySelector('#title').value.trim();
+    const postContent = document.querySelector('#post-area').value.trim();
     const urlArr = window.location.href.split('/');
     const postId = urlArr[urlArr.length-1];
 
     const response = await fetch('/api/posts', {
         method: 'PUT',
-        body: JSON.stringify({ postContent, postTitle, postId }),
+        body: JSON.stringify({ postTitle, postContent, postId }),
         headers: {
             "Content-Type" : "application/json",
         },

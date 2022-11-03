@@ -12,17 +12,15 @@ router.get('/', async (req, res) => {
                     attributes: ['name'],
                 },
             ],
-        });
-
-        const posts = postData.map((post) => {
-            post.get({ plain: true })
-        });
+        }).catch((err) => res.json(err));
+        
+        const posts = postData.map((post) => post.get({ plain: true }));
 
         res.render('homepage', {
             posts,
             title: 'Tech Blog',
             style: 'jass.css',
-            loggedIn: req.session.logged_in,
+            logged_in: req.session.logged_in,
         });
     } catch (err) {
         res.status(500).json(err);
@@ -63,9 +61,9 @@ router.get('/post/:id', withAuth, async (req, res) => {
         res.render('post', {
             post, 
             comm,
-            title: 'Test',
+            title: 'Post',
             style: 'jass.css',
-            loggedIn: req.session.logged_in,
+            logged_in: req.session.logged_in,
         });
 
     } catch (err) {
@@ -76,7 +74,7 @@ router.get('/post/:id', withAuth, async (req, res) => {
 
 // Route for login page
 router.get('/login', (req, res) => {
-    if (req.session.loggedIn) {
+    if (req.session.logged_in) {
         res.redirect('/dashboard');
         return;
     }
@@ -88,8 +86,11 @@ router.get('/login', (req, res) => {
 
 
 // Route for dashboard
-router.get('/dashboard', withAuth, async (req, res) => {
+router.get('/dashboard', withAuth, async (req, res) => 
+{
     try {
+        
+
         const userData = await User.findByPk(req.session.user_id, {
             include: [
                 {
@@ -102,7 +103,9 @@ router.get('/dashboard', withAuth, async (req, res) => {
 
         res.render('dashboard', {
             user, 
-            loggedIn: req.session.logged_in,
+            title: 'Dashboard',
+            style: 'jass.css',
+            logged_in: req.session.logged_in,
         });
     } catch (err) {
         res.status(500).json(err);
@@ -116,7 +119,7 @@ router.get('/update/:id', withAuth, async (req, res) => {
         const post = postData.get({ plain: true });
         res.render('update', {
             post,
-            loggedIn: req.session.logged_in,
+            logged_in: req.session.logged_in,
         });
     } catch (err) {
         res.status(500).json(err);

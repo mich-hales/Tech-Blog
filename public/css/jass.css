@@ -12,11 +12,22 @@ body {
     background-color:#393838;
 }
 
+.card-header {
+  background-color: var(--dark-pastel-blue);
+  color: white;
+  font-weight: bold;
+  padding: 1rem;
+}
+
 .forum {
     font-size: 3rem;
     text-align: center;
     margin-bottom: 2rem;
     
+}
+
+.make-new {
+  color: white;
 }
 
 .nav-color {

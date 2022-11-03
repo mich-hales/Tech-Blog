@@ -2,22 +2,23 @@
 
 const post = async (event) => {
     event.preventDefault();
-    const postData = document.querySelector('#post-area').value.trim();
+
     const postTitle = document.querySelector('#title').value.trim();
+    const postContent = document.querySelector('#post-area').value.trim();
 
     const response = await fetch('/api/posts', {
         method: 'POST',
-        body: JSON.stringify({ postData, postTitle }),
+        body: JSON.stringify({ postTitle, postContent }),
         headers: {
             "Content-Type" : "application/json",
         },
     });
 
     if (response.ok) {
-        document.location.reload();
+        document.location.reload('/posts');
     } else {
         alert ('Failed to create post');
     }
 };
 
-document.querySelector('#btn').addEventListener('click', post);
+document.querySelector('#create-post-btn').addEventListener('click', post);
