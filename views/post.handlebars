@@ -5,7 +5,7 @@
 
   <div class="card-body">
     <p class="card-text">{{post.content}}</p>
-    <p class="card-title">Posted by: {{post.user.name}} on {{moment post.date "MM/DD/YYYY"}}</p>
+    <p class="card-text p-1" style="font-weight: bold;">Posted by: {{post.user.name}} on {{moment post.date "MM/DD/YYYY"}}</p>
   </div>
 </div>
 
@@ -19,7 +19,7 @@
     <div class="card m-2">
       <div class="card-body">
         <p class="card-text">{{com.content}}</p>
-        <p class="card-title">Posted by: {{com.user.name}} on {{com.date}}</p>
+        <p class="card-text" style="font-style: italic;">Posted by: {{com.user.name}} on {{moment com.date "MM/DD/YYYY"}}</p>
       </div>
     </div>
     {{/each}}
