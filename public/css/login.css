@@ -44,6 +44,7 @@
   
   .navbar {
     background-color: var(--dark-pastel-blue);
+    margin-bottom: 2rem;
   }
   
   .navbar-brand {
