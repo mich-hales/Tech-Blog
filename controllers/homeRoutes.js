@@ -43,8 +43,10 @@ router.get('/post/:id', withAuth, async (req, res) => {
 
         const post = postData.get({ plain: true });
 
+        console.log
+
         // Getting all the comment data
-        let commentData = [];
+        let commData = [];
         for (let i = 0; i < post.comments.length; i++) {
             const comment = await Comment.findByPk(post.comments[i].id, {
                 include: [
@@ -53,8 +55,7 @@ router.get('/post/:id', withAuth, async (req, res) => {
                     },
                 ],
             });
-
-            commentData.push(comment);
+            commData.push(comment);
         }
 
         const comm = commData.map((com) => com.get({ plain: true }));
