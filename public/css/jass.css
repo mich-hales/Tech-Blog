@@ -1,5 +1,6 @@
 :root {
     --dark-pastel-blue: #809bce;
+    --light-pastel-blue: #90afe8;
     --med-pastel-blue: #95b8d1;
     --dark-honeydew: #b8e0d2;
     --light-honeydew: #d6eadf;
@@ -12,11 +13,57 @@ body {
     background-color:#393838;
 }
 
-.card-header {
+.comment-container {
   background-color: var(--dark-pastel-blue);
+  padding: 2rem;
+  border-radius: 5px;
+  width: 97%;
+  flex-direction: column;
+}
+
+.text-area-comment {
+  width: 80%;
+}
+
+.commenting {
+  flex-direction: column;
+}
+
+.card-header {
+  background-color: var(--light-pastel-blue);
   color: white;
   font-weight: bold;
   padding: 1rem;
+}
+
+.comments-here {
+  color: white;
+  font-size: 2rem;
+}
+
+.leave-comment {
+  color: white;
+  font-size: 2rem;
+}
+
+#update {
+  background-color: var(--dark-pastel-pink);
+  color: black;
+}
+
+#delete {
+  background-color: var(--dark-pastel-blue);
+  color: white;
+}
+
+#create-post-btn {
+  background-color: var(--dark-pastel-pink);
+  color: black;
+}
+
+#btn {
+  background-color: var(--dark-pastel-pink);
+  color: black;
 }
 
 .forum {
