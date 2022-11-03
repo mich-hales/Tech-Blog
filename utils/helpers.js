@@ -1,7 +1,11 @@
+const Handlebars = require('handlebars');
+var MomentHandler = require('handlebars.moment');
+MomentHandler.registerHelpers(Handlebars);
+
 module.exports = {
-    // no function with .toLocalDateString()???
-    format_date: (date) => {
+    format_date: (date, format) => {
         // Format date as MM/DD/YYYY
-        return date.toLocaleDateString();
+        let mm = moment(date);
+        return mm.format(format);
       },
 };
