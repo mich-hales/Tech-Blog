@@ -9,7 +9,7 @@ const post = async (event) => {
         method: 'POST',
         body: JSON.stringify({ postData, postTitle }),
         headers: {
-            'Content-Type' : 'application/json',
+            "Content-Type" : "application/json",
         },
     });
 

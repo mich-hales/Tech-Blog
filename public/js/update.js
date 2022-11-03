@@ -16,7 +16,7 @@ const update = async (event) => {
     });
 
     if (response.ok) {
-        document.location.reload('/dashboard');
+        document.location.href='/dashboard';
     } else {
         alert ('Failed to update post');
     }

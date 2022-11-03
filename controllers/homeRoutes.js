@@ -20,6 +20,8 @@ router.get('/', async (req, res) => {
 
         res.render('homepage', {
             posts,
+            title: 'Tech Blog',
+            style: 'jass.css',
             loggedIn: req.session.logged_in,
         });
     } catch (err) {
@@ -61,6 +63,8 @@ router.get('/post/:id', withAuth, async (req, res) => {
         res.render('post', {
             post, 
             comm,
+            title: 'Test',
+            style: 'jass.css',
             loggedIn: req.session.logged_in,
         });
 
@@ -76,8 +80,12 @@ router.get('/login', (req, res) => {
         res.redirect('/dashboard');
         return;
     }
-    res.render('login');
+    res.render('login', {
+        title: 'Login',
+        style: 'login.css',
+    });
 });
+
 
 // Route for dashboard
 router.get('/dashboard', withAuth, async (req, res) => {

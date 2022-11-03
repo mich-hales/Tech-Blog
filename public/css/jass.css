@@ -1,10 +1,104 @@
-.new-background {
-    background-color:honeydew;
+:root {
+    --dark-pastel-blue: #809bce;
+    --med-pastel-blue: #95b8d1;
+    --dark-honeydew: #b8e0d2;
+    --light-honeydew: #d6eadf;
+    --dark-pastel-pink: #eac4d5;
+    --pastel-purp: #9cadce;
+    --light-pastel-purp: #d1cfe2;
 }
 
-.post-title {
-    font-size: 1.5rem;
-    margin-left: 3px;
+body {
+    background-color:#393838;
 }
+
+.forum {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    
+}
+
+.nav-color {
+    height: 4.5rem;
+  }
+
+  #techBlogLogo {
+    font-weight: bold;
+  }
+  
+  .navbar {
+    background-color: var(--dark-pastel-blue);
+    margin-bottom: 2rem;
+  }
+  
+  .navbar-brand {
+      font-size: 1.5rem;
+      letter-spacing: .05em;
+  }
+  
+  .nav-link  {
+      font-size: 1.3rem;
+      letter-spacing: .05em;
+  }
+  
+  .centerit {
+    display: flex;
+    justify-content: center;
+  }
+  
+  
+    h1,
+    h2 {
+      line-height: 1.25;
+      color: white;
+    }
+    
+    h1 {
+      font-size: 2.25rem;
+      margin: 2 2 2 0rem;
+      
+    }
+    
+    h2 {
+      font-size: 2rem;
+      margin: 2 2 2 0rem;
+    }
+    
+    p {
+      font-size: 1.1rem;
+      margin: 0 0 1rem;
+      line-height: 1.5;
+    }
+    
+    input,
+    select,
+    textarea,
+    button {
+      margin: 0;
+    }
+    
+    .btn {
+      text-align: center;
+      display: inline-block;
+      padding: 0.5rem 1.2rem;
+      margin-left: .5rem;
+      margin-top: .5rem;
+      text-decoration: none;
+      font-size: 1rem;
+      border-radius: 0.3rem;
+      border: 1px solid transparent;
+      outline: none;
+      color: #1a1a1a;
+      background-color: white;
+      transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    }
+    
+    .btn:hover {
+      background-color: #cecece;
+    }
+  
+
+
 
 

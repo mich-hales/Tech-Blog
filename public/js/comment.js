@@ -2,7 +2,7 @@
 
 const comment = async (event) => {
     event.preventDefault();
-    const commentData = document.querySelector('#comment-text').value.trim();
+    const commentData = document.querySelector('#comment-area').value.trim();
     const urlArr = window.location.href.split('/');
     const postId = urlArr[urlArr.length - 1];
 
@@ -10,7 +10,7 @@ const comment = async (event) => {
         method: 'POST',
         body: JSON.stringify({ commentData, postId }),
         headers: {
-            'Content-Type' : 'application/json',
+            "Content-Type" : "application/json",
         },
     });
 

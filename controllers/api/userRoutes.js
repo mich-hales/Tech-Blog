@@ -1,22 +1,33 @@
 const router = require('express').Router();
 const { User } = require('../../models');
 
-// login button endpoint 
+// user login
 router.post('/login', async (req, res) => {
     try {
-        const userData = await User.findOne({ where: { name: req.body.username }});
+        // Find the user who matches the posted e-mail address
+        const userData = await User.findOne(
+            { where: 
+                { 
+                    email: req.body.email 
+                }
+            }
+            );
 
-        if(!userData) {
-            res.status(400).json({ message: 'Invalid username or password, please try again.'});
+            console.log('USER DATA', userData);
+        if (!userData) {
+            res.status(400).json({ message: 'Invalid email or password, please try again.'});
             return;
         }
 
+        // Verify the posted password with the password store in the database
         const validPassword = await userData.checkPassword(req.body.password);
-        if(!validPassword) {
-            res.status(400).json({ message: 'Invalid username or password, please try again.'});
+
+        if (!validPassword) {
+            res.status(400).json({ message: 'Invalid email or password, please try again.'});
             return;
         }
 
+        // Create session variables based on the logged in user
         req.session.save(() => {
             req.session.user_id = userData.id;
             req.session.logged_in = true;
@@ -27,11 +38,12 @@ router.post('/login', async (req, res) => {
     }
 });
 
-// Signup button endpoint
+// User signup 
 router.post('/signup', async (req, res) => {
     try {
         const userData = await User.create({
             name: req.body.username,
+            email: req.body.email,
             password: req.body.password
         });
 

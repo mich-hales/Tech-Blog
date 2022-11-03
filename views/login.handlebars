@@ -1,39 +1,45 @@
-<section>
-      <div class="row justify-content-center my-5">
-        <h2>Login</h2>
+<div class="row centerit">
+  <div class="login-card">
+    <form class="form login-form">
+      <h2 class="page-title">Login</h2>
+      <section class="insides">
+      <div class="form-group">
+        <label for="email-login">Email:</label>
+        <input class="form-input" autocomplete="off" type="text" id="email-login"/>
       </div>
-      
-      <div class="row justify-content-center my-5">
-        <form id="loginForm" class="col-6">
-          <div class="form-group">
-            <label for="inputUsername">Username</label>
-            <input type="text" class="form-control" id="username" placeholder="Enter username">
-          </div>
-          <div class="form-group">
-            <label for="inputPassword">Password</label>
-            <input type="password" class="form-control" id="password" placeholder="Password">
-          </div>
-            <button type="submit" class="btn btn-dark mb-3">Login</button>
-        </form>
+      <div class="form-group">
+        <label for="password-login">Password:</label>
+        <input class="form-input" autocomplete="off" type="password" id="password-login"/>
       </div>
-    
+      </section>
+      <div class="form-group">
+        <button class="btn btn-primary" id="loginForm" type="submit">login</button>
+      </div>
+    </form>
+  </div>
+  <div class="login-card">
+    <form class="form signup-form">
+      <h2 class="page-title">Signup</h2>
+      <section class="insides">
+      <div class="form-group">
+        <label for="username-signup">Name:</label>
+        <input class="form-input" autocomplete="off" type="text" id="username-signup" />
+      </div>
+      <div class="form-group">
+        <label for="email-signup">Email:</label>
+        <input class="form-input" autocomplete="off" type="text" id="email-signup" />
+      </div>
+      <div class="form-group">
+        <label for="password-signup">Password:</label>
+        <input class="form-input" autocomplete="off" type="password" id="password-signup" />
+      </div>
+      </section>
+     
+      <div class="form-group">
+        <button class="btn btn-primary" id="signupForm" type="submit">signup</button>
+      </div>
+    </form>
+  </div>
+</div>
 
-      <div class="row justify-content-center my-5">
-        <h2>Sign Up</h2>
-      </div>
-      
-      <div class="row justify-content-center my-5">
-        <form id="signupForm" class="col-6">
-          <div class="form-group">
-            <label for="inputUsername">Username</label>
-            <input type="text" class="form-control" id="username2" placeholder="Enter username">
-          </div>
-          <div class="form-group">
-            <label for="inputPassword">Password</label>
-            <input type="password" class="form-control" id="password2" placeholder="Password">
-          </div>
-            <button type="submit" class="btn btn-dark mb-3">Sign Up</button>
-        </form>
-      </div>
-    </section>
-    <script src="./js/login.js"></script>
+<script src="./js/login.js"></script>
