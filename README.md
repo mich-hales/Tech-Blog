@@ -47,5 +47,5 @@ Screenshot of the application:
 * Sequelize
 
 ## Links
-* View the application: 
+* View the application: https://tech-blog-333.herokuapp.com/
 * GitHub repository: https://github.com/mich-hales/Tech-Blog
